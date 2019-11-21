@@ -13,7 +13,7 @@ h1 {
 }
 h2 {
 	font-weight:100;
-	font-size: 18px;
+	font-size: 26px;
 }
 p {
 	font-size: 16px;
@@ -25,6 +25,13 @@ h4 {
 	font-weight: 100;
 }
 
+
+.frontimg {
+	width:400px;
+	height:300px;
+	text-align: left;
+	border-radius: 20%;
+}
 
 /*MENU HEADER STYLE*****************************************************************/
 .menu {
@@ -62,7 +69,7 @@ h4 {
 .menu .login:link {
 	padding: 18px 16px;
 	font-size: 14px;
-	font-style: italic;	
+	font-style: italic;
 }
 
 .menu .login:visited { color:white; }
@@ -105,7 +112,7 @@ h4 {
 		float: right;
     	display: block;
   	}
-	.menu a.icon:hover { 
+	.menu a.icon:hover {
 		opacity: 0.5;
 		background-color: #1A4039;
 	}
@@ -146,7 +153,7 @@ main h1 {
 .contain {
 	width: 90%;
 	margin: auto;
-	display: flex;	
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
@@ -284,7 +291,3 @@ hr{ width: 50%; margin-top: 30px;}
 
 @media screen and (max-width: 768px) {
 	hr { width: 75% }
-
-
-
-

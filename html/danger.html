@@ -23,14 +23,14 @@
 	<a class="login" href="login.html">Login</a>
 	<a href="danger.html">Dangers Affecting Species</a>
 	<a href="nonprofit.html">Nonprofits</a>
-	<a href="search.php" class="active">Species Search</a>
+	<a href="search.html" class="active">Species Search</a>
 </div>
 
 <main>
 
 	<p>Search our database of plants and animals that are threatened and endangered. Use the buttons below to search within a category or subcategory, or search the entire database. </p>
 
-	<h1>Search Species by Category:</h1>
+	<h1>Search Dangers by Category:</h1>
 	<p style="text-align: center;">Please select a category to search by</p>
 	<span style="display:block; height: 30px;"></span>
 
@@ -38,19 +38,13 @@
 		<input type="radio" id="all" name="category" checked="checked"/>
 		<label for="all">Search All</label>
 		<input type="radio" id="animals" name="category"/>
-		<label for="animals">Animals</label>
+		<label for="animals">Human Caused</label>
 
 		<input type="radio" id="plants" name="category"/>
-		<label for="plants">Plants</label>
+		<label for="plants">Naturally Occuring</label>
 
 		<input type="radio" id="region" name="category"/>
-		<label for="region">By Region</label>
-
-		<input type="radio" id="population" name="category"/>
-		<label for="population">By Population</label>
-
-		<input type="radio" id="dangers" name="category"/>
-		<label for="dangers">By Dangers</label>
+		<label for="region">Climate Change</label>
 	</form>
 
 	<br>
@@ -116,29 +110,24 @@
 				<span style="display:block; height: 30px;"></span>
 				<table class="pure-table" style="width: 80%; text-align: center; margin: 0 auto;">
 				 <tr>
-					 <th>Animal</th>
-					 <th>Biome</th>
-					 <th>Population</th>
+					 <th>Cause</th>
+					 <th>Danger Level</th>
+					 <th>Species Impacted</th>
 				 </tr>
 				 <tr>
-					 <td>White Tiger</td>
-					 <td>Rainforest</td>
-					 <td>3500</td>
+					 <td>Sea Level Rise</td>
+					 <td>5</td>
+					 <td>24000</td>
 				 </tr>
 				 <tr>
-					 <td>Brazilian Dart Frog</td>
-					 <td>Rainforest</td>
-					 <td>20000</td>
+					 <td>Hunting/Poaching</td>
+					 <td>3</td>
+					 <td>2500</td>
 				 </tr>
 				 <tr>
-					 <td>Ultra Killer Whale</td>
-					 <td>Ocean</td>
+					 <td>Natural Selection</td>
+					 <td>1</td>
 					 <td>45000</td>
-				 </tr>
-				 <tr>
-					 <td>King Penguin</td>
-					 <td>Arctic</td>
-					 <td>67500</td>
 				 </tr>
 				</table>`
 			);
