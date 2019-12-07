@@ -16,7 +16,7 @@ if(!isset($_SESSION['user_id']))
 <link rel="stylesheet" type="text/css" href="esd_styles.css">
 </head>
 
-<body>
+<body onload="showComments()">
 <!-- header -->
 <div class="logo">
 	<a href="index.html"><img src="esd-logo-03.png" alt="ESD"></a>
@@ -45,6 +45,8 @@ if(!isset($_SESSION['user_id']))
 	</form>
 	<hr>
 	<h3>Newest messages from contact form</h3>
+	<div id="comments">
+	</div>
 </main>
 
 <!-- footer -->
@@ -94,6 +96,18 @@ $( document ).ready(function(){
 			var y = document.getElementById("keyword").firstChild;
 			var newKey = y.cloneNode(true);
 			document.getElementById("keyword").appendChild(newKey);
+		}
+		function showComments(){
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function()
+			{
+				if(this.readyState==4 && this.status==200)
+				{
+					document.getElementById("comments").innerHTML = this.responseText;
+				}
+			};
+			xhttp.open("POST","recentComments.php",true);
+			xhttp.send();
 		}
 </script>
 
