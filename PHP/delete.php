@@ -219,20 +219,21 @@ input:checked + .slider:before {
 $( document ).ready(function(){
 	$('#orgsubmit').click(function(){
 		$.ajax({
-      url: '#',
+      url: 'deleteFrom.php',
       type: 'POST',
       data: {
 				table: 'Organisms',
-				bionmial_nomenclature: $('#binomial').val(),
+				binomial_nomenclature: $('#binomial').val(),
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#dangersubmit').click(function(){
 		$.ajax({
-      url: '#',
+      url: 'deleteFrom.php',
       type: 'POST',
       data: {
 				table: 'Dangers',
@@ -240,12 +241,13 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#regionsubmit').click(function(){
 		$.ajax({
-      url: '/assignmentcoursesession',
+      url: 'deleteFrom.php',
       type: 'POST',
       data: {
 				table: 'Region',
@@ -254,12 +256,13 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#nposubmit').click(function(){
 		$.ajax({
-      url: '/assignmentcoursesession',
+      url: 'deleteFrom.php',
       type: 'POST',
       data: {
 				table: 'NPOs',
@@ -267,6 +270,7 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});

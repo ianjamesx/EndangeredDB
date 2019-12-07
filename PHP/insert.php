@@ -154,6 +154,9 @@ input:checked + .slider:before {
 		        <input id="orgname" class="pure-input-1-2" placeholder="Organism Name">
 		        <input id="binomial" class="pure-input-1-2" placeholder="Binomial Nomenclature">
 		        <input id="imageurl" class="pure-input-1-2" placeholder="Sample Image URL">
+				<input id="population" class="pure-input-1-2" placeholder="Population Number">
+				<input id="classification" class="pure-input-1-2" placeholder="Classification">
+				<input id="lifespan" class="pure-input-1-2" placeholder="Lifespan/Life Duration (In Years)">
 	    		</fieldset>
 
 					<p>Type</p>
@@ -241,7 +244,7 @@ input:checked + .slider:before {
 $( document ).ready(function(){
 	$('#orgsubmit').click(function(){
 		$.ajax({
-      url: '#',
+      url: 'insertOrg.php',
       type: 'POST',
       data: {
 				table: 'Organisms',
@@ -250,15 +253,19 @@ $( document ).ready(function(){
 				url: $('#imageurl').val(),
 				type: $('#type').val(),
 				watchlist: $('#watchlist').val(),
+				population: $('#population').val(),
+				classification: $('#classification').val(),
+				lifespan: $('#lifespan').val(),
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#dangersubmit').click(function(){
 		$.ajax({
-      url: '#',
+      url: 'insertDanger.php',
       type: 'POST',
       data: {
 				table: 'Dangers',
@@ -267,12 +274,13 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#regionsubmit').click(function(){
 		$.ajax({
-      url: '/assignmentcoursesession',
+      url: 'insertRegion.php',
       type: 'POST',
       data: {
 				table: 'Region',
@@ -281,12 +289,13 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});
 	$('#nposubmit').click(function(){
 		$.ajax({
-      url: '/assignmentcoursesession',
+      url: 'insertNPO.php',
       type: 'POST',
       data: {
 				table: 'NPOs',
@@ -296,6 +305,7 @@ $( document ).ready(function(){
       },
       datatype: 'json',
       success: function(data){
+		  alert(data);
       }
     });
 	});

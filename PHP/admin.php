@@ -67,13 +67,13 @@ if(!isset($_SESSION['user_id']))
 <script>
 $( document ).ready(function(){
 	$('#insert').click(function(){
-		window.location.href = "insert.html";
+		window.location.href = "insert.php";
 	});
 	$('#delete').click(function(){
-		window.location.href = "insert.html";
+		window.location.href = "delete.php";
 	});
 	$('#update').click(function(){
-		window.location.href = "insert.html";
+		window.location.href = "update.php";
 	});
 });
 //function to create responsive and collapsible menu

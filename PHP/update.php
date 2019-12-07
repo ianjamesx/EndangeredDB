@@ -133,12 +133,12 @@ input:checked + .slider:before {
 
 <main>
 
-	<h1>Insert Data into ESD</h1>
-	<h3 style="text-align: center;">Please select what type of data you would like to insert</h3>
+	<h1>Update Data in ESD</h1>
+	<h3 style="text-align: center;">Please select what type of data you would like to update</h3>
 	<span style="display:block; height: 30px;"></span>
 
 	<div class="tab">
-	  <button class="tablinks" onclick="switchtab(event, 'organsim')" id="defaultOpen">Organism</button>
+	  <button class="tablinks" onclick="switchtab(event, 'organsim')"  id="defaultOpen">Organism</button>
 	  <button class="tablinks" onclick="switchtab(event, 'danger')">Danger</button>
 	  <button class="tablinks" onclick="switchtab(event, 'region')">Region</button>
 		<button class="tablinks" onclick="switchtab(event, 'npo')">NPO</button>
@@ -147,30 +147,15 @@ input:checked + .slider:before {
 	<div id="organsim" class="tabcontent">
 
 		<div id="neworg">
-			<h2>Insert an Organism to the Database</h2>
+			<h2>Enter unique key for Organism</h2>
 			<form class="pure-form">
 
 					<fieldset class="pure-group">
-		        <input id="orgname" class="pure-input-1-2" placeholder="Organism Name">
 		        <input id="binomial" class="pure-input-1-2" placeholder="Binomial Nomenclature">
-		        <input id="imageurl" class="pure-input-1-2" placeholder="Sample Image URL">
 	    		</fieldset>
 
-					<p>Type</p>
-					<select id="type" class="pure-input-1-2">
-						<option value="animal">Animal</option>
-						<option value="plant">Plant</option>
-					</select>
-					<br><span style="display:block; height: 30px;"></span>
-
-					<h3>Organism on Watchlist?&nbsp;
-					<label class="switch">
-					  <input type="checkbox" id="watchlist">
-					  <span class="slider round"></span>
-					</label></h3>
-
-					<br><span style="display:block; height: 30px;"></span>
-	        <input type="button" id="orgsubmit" value="Submit"></input>
+					<br><span style="display:block; height: 20px;"></span>
+	        <input type="button" id="orgsubmit" value="Search for Record"></input>
 
 			</form>
 		</div>
@@ -178,43 +163,36 @@ input:checked + .slider:before {
 	</div>
 
 	<div id="danger" class="tabcontent">
-		<h2>Insert a Species Danger to the Database</h2>
+		<h2>Enter unique key for Species Danger</h2>
 		<form class="pure-form">
 				<fieldset class="pure-group">
 					<input id="dangername" class="pure-input-1-2" placeholder="Danger Name">
 				</fieldset>
-				<h3>Human Caused?&nbsp;
-				<label class="switch">
-					<input type="checkbox" id="human">
-					<span class="slider round"></span>
-				</label></h3>
-				<br><span style="display:block; height: 30px;"></span>
-				<input type="button" id="dangersubmit" value="Submit"></input>
+				<br><span style="display:block; height: 20px;"></span>
+				<input type="button" id="dangersubmit" value="Search for Record"></input>
 		</form>
 	</div>
 
 	<div id="region" class="tabcontent">
-		<h2>Insert a Region to the Database</h2>
+		<h2>Enter unique key for Region</h2>
 		<form class="pure-form">
 				<fieldset class="pure-group">
 	        <input id="regionname" class="pure-input-1-2" placeholder="Region Name">
 	        <input id="biome" class="pure-input-1-2" placeholder="Biome">
     		</fieldset>
-				<br><span style="display:block; height: 30px;"></span>
-        <input type="button" id="regionsubmit" value="Submit"></input>
+				<br><span style="display:block; height: 20px;"></span>
+        <input type="button" id="regionsubmit" value="Search for Record"></input>
 		</form>
 	</div>
 
 	<div id="npo" class="tabcontent">
-		<h2>Insert an NPO to the Database</h2>
+		<h2>Enter unique key for NPO</h2>
 		<form class="pure-form">
 				<fieldset class="pure-group">
 	        <input id="nponame" class="pure-input-1-2" placeholder="NPO Name">
-	        <input id="npolink" class="pure-input-1-2" placeholder="Link (URL)">
-	        <input id="npofund" class="pure-input-1-2" type="number" placeholder="Funding (In Dollars)">
     		</fieldset>
-				<br><span style="display:block; height: 30px;"></span>
-        <input type="button" id="nposubmit" value="Submit"></input>
+				<br><span style="display:block; height: 20px;"></span>
+        <input type="button" id="nposubmit" value="Search for Record"></input>
 		</form>
 	</div>
 
@@ -239,66 +217,59 @@ input:checked + .slider:before {
 
 <script>
 $( document ).ready(function(){
-	$('#orgsubmit').click(function(){
-		$.ajax({
-      url: '#',
-      type: 'POST',
-      data: {
-				table: 'Organisms',
-				name: $('#orgname').val(),
-				bionmial_nomenclature: $('#binomial').val(),
-				url: $('#imageurl').val(),
-				type: $('#type').val(),
-				watchlist: $('#watchlist').val(),
-      },
-      datatype: 'json',
-      success: function(data){
-      }
-    });
-	});
-	$('#dangersubmit').click(function(){
-		$.ajax({
-      url: '#',
-      type: 'POST',
-      data: {
-				table: 'Dangers',
-				name: $('#dangername').val(),
-				watchlist: $('#human').val(),
-      },
-      datatype: 'json',
-      success: function(data){
-      }
-    });
-	});
-	$('#regionsubmit').click(function(){
-		$.ajax({
-      url: '/assignmentcoursesession',
-      type: 'POST',
-      data: {
-				table: 'Region',
-				name: $('#regionname').val(),
-				biome: $('#biome').val(),
-      },
-      datatype: 'json',
-      success: function(data){
-      }
-    });
-	});
-	$('#nposubmit').click(function(){
-		$.ajax({
-      url: '/assignmentcoursesession',
-      type: 'POST',
-      data: {
-				table: 'NPOs',
-				name: $('#nponame').val(),
-				link:  $('#npolink').val(),
-				funding: $('#npofund').val(),
-      },
-      datatype: 'json',
-      success: function(data){
-      }
-    });
-	});
+  	$('#orgsubmit').click(function(){
+  		$.ajax({
+        url: '#',
+        type: 'POST',
+        data: {
+  				table: 'Organisms',
+  				bionmial_nomenclature: $('#binomial').val(),
+        },
+        datatype: 'json',
+        success: function(data){
+        }
+      });
+  	});
+  	$('#dangersubmit').click(function(){
+  		$.ajax({
+        url: '#',
+        type: 'POST',
+        data: {
+  				table: 'Dangers',
+  				name: $('#dangername').val(),
+        },
+        datatype: 'json',
+        success: function(data){
+        }
+      });
+  	});
+  	$('#regionsubmit').click(function(){
+  		$.ajax({
+        url: '/assignmentcoursesession',
+        type: 'POST',
+        data: {
+  				table: 'Region',
+  				name: $('#regionname').val(),
+  				biome: $('#biome').val(),
+        },
+        datatype: 'json',
+        success: function(data){
+        }
+      });
+  	});
+  	$('#nposubmit').click(function(){
+  		$.ajax({
+        url: '/assignmentcoursesession',
+        type: 'POST',
+        data: {
+  				table: 'NPOs',
+  				name: $('#nponame').val(),
+        },
+        datatype: 'json',
+        success: function(data){
+        }
+      });
+  	});
 });
 //some stuff for tab switching
 function switchtab(evt, tab) {
