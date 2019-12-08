@@ -131,11 +131,10 @@ h4 {
 
 @media screen and (max-width: 768px) {
   	.responsive {
-		position: relative;
+		position: fixed;
 		padding: 0;
 		width: 100%;
 		background-color: #1A4039;
-		opacity: .95;
 		overflow: hidden;
 		font-size: 18px;
 		top: 0px;
@@ -152,9 +151,7 @@ h4 {
 		width: 100%;
   	}
 	.responsive .icon {
-    	position: fixed;
-    	right: 0;
-    	top: 0;
+		float: right;
   	}
 	.responsive a:hover {
 		background-color: white;
@@ -174,6 +171,9 @@ main{
 	margin-top: 100px;
 	margin-bottom: 100px;
 	position: relative;	
+}
+@media screen and (max-width: 768px) {
+	main { width: 85%;	}
 }
 
 main h1 {
@@ -291,6 +291,7 @@ input[type="button"], input[type="submit"] {
 	padding: 6px 30px;
 	border-radius: 20px;
 	border: 1px solid #1A4039;
+	cursor: pointer;
 }
 
 input[type="button"]:hover {
@@ -364,6 +365,10 @@ input[type="submit"]:hover {
 	margin-bottom: 20px;
 	text-align: left;
 }
+@media screen and (max-width: 768px) {
+	.result { padding: 5%; }
+	.result span { float: none; }
+}
 
 .result img { 
 	float: left; 
@@ -379,6 +384,11 @@ input[type="submit"]:hover {
 	text-align: left;
 	width: 70%;
 }
+
+.result span {
+	float: right;
+}
+
 
 
 
@@ -438,6 +448,11 @@ input[type="submit"]:hover {
 .box hr {
 	width: 100%;	
 	border: 1px solid #40A391;
+}
+
+.box input[type="button"] {
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 /*ADMIN PAGE**************************************************************/
