@@ -464,6 +464,8 @@ input[type="submit"]:hover {
 	border-radius: 5px;
 	background-color: #E5E5E5;
 }
+
+/*
 .tablinks {
 	display: inline-block;
 	background-color: #1A4039;
@@ -487,6 +489,8 @@ input[type="submit"]:hover {
 	color:#1A4039;
 	border: 1px solid #1A4039;
 }
+
+*/
 
 /*Slider effects*/
 .switch {
