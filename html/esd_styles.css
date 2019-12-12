@@ -455,18 +455,7 @@ input[type="submit"]:hover {
 	margin-bottom: 30px;
 }
 
-/*ADMIN PAGE**************************************************************/
-.file {
-	width: 84%;
-	margin: auto;
-	margin-bottom: 30px;
-	padding: 4% 8%;
-	border-radius: 5px;
-	background-color: #E5E5E5;
-}
-
-/*
-.tablinks {
+.dangerlinks {
 	display: inline-block;
 	background-color: #1A4039;
 	color: white;
@@ -479,18 +468,26 @@ input[type="submit"]:hover {
 	transition: 0.3s;
 }
 
-.tab button.active {
+.dangertab button.active {
 	background-color: #40A391;
 	border: 1px solid #40A391;
 }
 
-.tablinks:hover {
+.dangerlinks:hover {
 	background-color: white;
 	color:#1A4039;
 	border: 1px solid #1A4039;
 }
 
-*/
+/*ADMIN PAGE**************************************************************/
+.file {
+	width: 84%;
+	margin: auto;
+	margin-bottom: 30px;
+	padding: 4% 8%;
+	border-radius: 5px;
+	background-color: #E5E5E5;
+}
 
 /*Slider effects*/
 .switch {
