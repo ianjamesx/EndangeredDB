@@ -27,6 +27,10 @@ else if(is_numeric($entry))
 {
     $fundNum=$entry;
 }
+else
+{
+    $searchFunding=1;
+}
 if($regionSelect=='all')
 {
     $searchRegion=1;
@@ -49,6 +53,7 @@ else
 {
     $query = $query . " ORDER BY Funding DESC";
 }
+echo "$query";
 $result = mysqli_query($conn, $query);
 $rownNum=0;
 $outputArr = array();
@@ -66,8 +71,14 @@ while($row = mysqli_fetch_array($result))
         array_push($outputArr, $row['Name'], $row['Link'], $row['Funding']);        
     }
 }
-echo "$rownNum~";
-$arrlength = count($outputArr);
+if($rownNum!=0){
+    echo "$rownNum~";
+}
+else
+{
+    echo "NaN";
+}
+    $arrlength = count($outputArr);
 for($x = 0; $x <$arrlength;$x++)
 {
     echo $outputArr[$x];
