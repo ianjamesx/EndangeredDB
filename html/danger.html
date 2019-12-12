@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Species Search</title>
+<title>Dangers - Endangered Species Database</title>
 <link rel="stylesheet" type="text/css" href="esd_styles.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
@@ -17,49 +17,142 @@
 	<a href="index.html"><img src="esd-logo-03.png" alt="ESD"></a>
 </div>
 
-<div class="menu">
+<div class="menu" id="menu">
 	<a class="icon" href="javascript:void(0);" onclick="showMenu()"><img src="fa-bars.png" alt="MENU" width="22px"></a>
 	<a class="login" href="contact.html">Contact</a>
 	<a class="login" href="login.html">Login</a>
-	<a href="danger.html">Dangers Affecting Species</a>
+	<a href="danger.html" class="active">Dangers Affecting Species</a>
 	<a href="nonprofit.html">Nonprofits</a>
-	<a href="search.html" class="active">Species Search</a>
+	<a href="search.html">Species Search</a>
 </div>
 
 <main>
 
-	<p>Search our database of plants and animals that are threatened and endangered. Use the buttons below to search within a category or subcategory, or search the entire database. </p>
+	<p>Learn more about the Dangers that are affecting many different species around the world. You can also search <a href="search.html" class="lineLink">Endangered Species</a> or <a href="nonprofit.html" class="lineLink">Nonprofit Organizations</a> separately on those pages.</p>
 
-	<h1>Search Dangers by Category:</h1>
-	<p style="text-align: center;">Please select a category to search by</p>
+	<h1>Dangers Affecting Species:</h1>
 	<span style="display:block; height: 30px;"></span>
-
-	<form class="category">
-		<input type="radio" id="all" name="category" checked="checked"/>
-		<label for="all">Search All</label>
-		<input type="radio" id="animals" name="category"/>
-		<label for="animals">Human Caused</label>
-
-		<input type="radio" id="plants" name="category"/>
-		<label for="plants">Naturally Occuring</label>
-
-		<input type="radio" id="region" name="category"/>
-		<label for="region">Climate Change</label>
-	</form>
-
-	<br>
-	<span style="display:block; height: 30px;"></span>
-	<h1>Search:</h1>
-
-	<form class="keyword">
-		<input type="text" placeholder="Enter a search term here" size="30px" id="key1">
-	<!--	<input type="button" id="addKey" value="Add a Keyword" onClick="addKeyword()"> -->
-		<input type="button" id="submitSearch" value="Search">
-
-	</form>
-
-	<div id="dummy">
+	
+	<div class="dangertab">
+	  	<button class="dangerlinks" onclick="switchtab(event, 'climate')" id="defaultOpen">Climate Change</button>
+	  	<button class="dangerlinks" onclick="switchtab(event, 'deforest')">Deforestation</button>
+	 	<button class="dangerlinks" onclick="switchtab(event, 'disease')">Disease</button>
+		<button class="dangerlinks" onclick="switchtab(event, 'habitat')">Habitat Loss</button>
+		<button class="dangerlinks" onclick="switchtab(event, 'invasive')">Invasive Species</button>
+		<button class="dangerlinks" onclick="switchtab(event, 'exploit')">Overexploitation</button>
+		<button class="dangerlinks" onclick="switchtab(event, 'pollution')">Pollution</button>
 	</div>
+
+
+	
+	<span style="display:block; height: 30px;"></span>
+	
+<!--description from each different danger,
+	appears/changes when user clicks on each one-->
+	<div id="climate" class="dangercontent">
+		<div class="box">
+			<h2>Climate Change</h2>
+				<hr>
+			<p>Climate Change is a broad term used to describe the changes in the weather patterns of the earth and their effects.
+			 The main cause of these changes is human use of fossil fuels and the emission of greenhouse gases
+			 into the atmosphere. The causes and effects of climate change are all tied together in a visious
+		 	 cycle surrounding humans and their decisions and efforts. <br/>
+			Deforestation, over exploitation of resources, and pollution from human production and consumption
+			 are all considered causes of global climate change. The effects include rising sea levels, habitat loss, changes in
+		 	 percipitation, and increases in extreme weather events. All of these effects have the potential to negatively affect
+			 species of all kinds around the world.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="deforest" class="dangercontent">
+		<div class="box">
+			<h2>Deforestation</h2>
+			<hr>
+			<p>Deforestation describes the permanent mass removal of trees. Most deforestation today is happening in 
+			the tropics to make room for agriculture or cattle grazing. Forests in these areas are home to about 80% 
+			of all terrestrial biodiversity, and the violent destruction of these landscapes has greatly impacted the 
+			species of animals, plants, fungi, and microbes living there. About 3.9 million square miles of forest have been 
+			lost since the beginning of the 20th century.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="disease" class="dangercontent">
+		<div class="box">
+			<h2 id="type_disease">Disease</h2>
+			<hr>
+			<p>Diseases normally coexist with animals or plants without causing any significant harm to their 
+			populations. However, sudden outbreaks of disease within a species can threaten popoulations with 
+			drastic decline and/or extinction in some cases.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="habitat" class="dangercontent">
+		<div class="box">
+			<h2 id="type_habitat">Habitat Loss</h2>
+			<hr>
+			<p>Habitat loss occurs when a natural habitat is changed and is no longer able to support the species 
+			living there. The main causes of Habitat loss are pollution, invasive species, deforestation, and forest fires. 
+			Species living in a habitat that has been so severely impacted are forced to either migrate or else face severe
+			decline in population and /or extinction.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="invasive" class="dangercontent">
+		<div class="box">
+			<h2 id="type_invasive">Invasive Species</h2>
+			<hr>
+			<p>Invasive species are to blame for about 42% of all threatened or endangered species. An invasive species 
+			is any species that is not native to an ecosystem and causes harm. These species will reproduce quickly and 
+			spread aggressively throughout an ecosystem where there are no natural predators to keep their population 
+			in check. By using up resources and/or preying on native species, invasive species can topple entire ecosystems.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="exploit" class="dangercontent">
+		<div class="box">
+		<h2 id="type_exploit">Overexploitation</h2>
+			<hr>
+		<p>Overexploitation refers to the overharvesting or overhunting of species to the point of near population extinction. 
+		Examples of overexploitation include the illegal hunting of wild animals for fur, meat, or sport; insect or shell collectors; 
+		and the trapping of animals to sell as novelty pets.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	<div id="pollution" class="dangercontent">
+		<div class="box">
+			<h2 id="type_pollution">Pollution</h2>
+				<hr>
+			<p>Air pollution from the burning of fossil fuels is one the cause of climate change amoung other negative 
+			effects on species and ecosystems. Pollution in the form of pesticides and fertilizers has caused more 
+			immediate harm on organisms too. The world's chemical production has increased 400 fold since 1930. Those 
+			chemicals are washed into nearby streams and waterways, killing benefitial organisms while feeding explosive 
+			growths of algae that deplete the water of oxygen.</p>
+			<a href="search.html">
+				<input type="button" value="See Animals Affected">
+			</a>
+		</div>
+	</div>
+	
+	
+
 
 </main>
 
@@ -67,15 +160,15 @@
 <div class="footer">
 	<div class="center">
 		<a href="search.php">Species&nbsp;Search</a>
-		<a href="#nonprofits">Nonprofits</a>
-		<a href="#dangers">Dangers&nbsp;Affecting&nbsp;Species</a>
+		<a href="nonprofit.html">Nonprofits</a>
+		<a href="danger.html">Dangers&nbsp;Affecting&nbsp;Species</a>
 	<br>
 	<hr>
 	<br>
 
 		<a href="contact.html">Contact</a>
-		<a href="#login">Login</a>
-		<a href="index.php">Home</a>
+		<a href="login.html">Login</a>
+		<a href="index.html">Home</a>
 		<h4>Endangered Species Database &copy; 2019</h4>
 	</div>
 </div>
@@ -85,56 +178,36 @@
 		function showMenu() {
   			var x = document.getElementById("menu");
   			if (x.className === "menu") {
-    			x.className += " responsive";
+    			x.className = "responsive";
   			} else {
     			x.className = "menu";
   			}
 
-			if (x.src == "fa-bars.png"){
-				x.src = "fa-exit.png";
+			var y = document.getElementById("icon");
+			if (y.src == "fa-bars.png"){
+				y.src = "fa-exit.png";
 			}
-			else { x.src = "fa-bars.png"; }
+			else { y.src = "fa-bars.png"; }
 		}
 
-//function for add keyword button
-		function addKeyword() {
-			var y = document.getElementById("keyword").firstChild;
-			var newKey = y.cloneNode(true);
-			document.getElementById("keyword").appendChild(newKey);
-		}
 
-		$('#submitSearch').click(function(){
-
-			$("#dummy").html(
-				`<p>We found the following results in the database</p>
-				<span style="display:block; height: 30px;"></span>
-				<table class="pure-table" style="width: 80%; text-align: center; margin: 0 auto;">
-				 <tr>
-					 <th>Cause</th>
-					 <th>Danger Level</th>
-					 <th>Species Impacted</th>
-				 </tr>
-				 <tr>
-					 <td>Sea Level Rise</td>
-					 <td>5</td>
-					 <td>24000</td>
-				 </tr>
-				 <tr>
-					 <td>Hunting/Poaching</td>
-					 <td>3</td>
-					 <td>2500</td>
-				 </tr>
-				 <tr>
-					 <td>Natural Selection</td>
-					 <td>1</td>
-					 <td>45000</td>
-				 </tr>
-				</table>`
-			);
-
-		});
+function switchtab(evt, danger) {
+  var i, dangercontent, dangerlinks;
+  dangercontent = document.getElementsByClassName("dangercontent");
+  for (i = 0; i < dangercontent.length; i++) {
+    dangercontent[i].style.display = "none";
+  }
+  dangerlinks = document.getElementsByClassName("dangerlinks");
+  for (i = 0; i < dangerlinks.length; i++) {
+    dangerlinks[i].className = dangerlinks[i].className.replace(" active", "");
+  }
+  document.getElementById(danger).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+	document.getElementById("defaultOpen").click();
 
 </script>
+
 
 </body>
 </html>
