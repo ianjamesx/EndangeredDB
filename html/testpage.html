@@ -169,8 +169,7 @@ input:checked + .slider:before {
     <span style="display:block; height: 20px;"></span>
 
     <div class="tab" style="width: 35%;">
-  	  <button class="tablinks" onclick="switchtab(event, 'organsim')" id="defaultOpen">Organism</button>
-  	  <button class="tablinks" onclick="switchtab(event, 'danger')">Danger</button>
+  	  <button class="tablinks" onclick="switchtab(event, 'organsim')" id="defaultOpenInsert">Organism</button>
   		<button class="tablinks" onclick="switchtab(event, 'npo')">NPO</button>
   	</div>
 
@@ -244,33 +243,6 @@ input:checked + .slider:before {
 
   	</div>
 
-  	<div id="danger" class="tabcontent">
-      <h3>Insert a Danger to the Database</h3>
-      <form class="pure-form">
-
-          <fieldset class="pure-group">
-            <input id="dname" class="pure-input-2-3" placeholder="Danger Name">
-          </fieldset>
-
-          <p>Danger Category</p>
-          <select id="type" class="pure-input-1-2">
-            <option value="climate">Climate Change</option>
-            <option value="deforest">Deforestation</option>
-            <option value="disease">Disease</option>
-            <option value="habitat">Habitat Loss</option>
-            <option value="invasive">Invasive Species</option>
-            <option value="exploitation">Over Exploitation</option>
-            <option value="pollution">Pollution</option>
-          </select>
-          <br><span style="display:block; height: 15px;"></span>
-
-          <br><span style="display:block; height: 30px;"></span>
-          <input type="button" id="orgsubmit" value="Submit"></input>
-
-      </form>
-
-  	</div>
-
   	<div id="npo" class="tabcontent">
       <h3>Insert a Non-Profit Organization (NPO) to the database</h3>
       <form class="pure-form">
@@ -295,12 +267,56 @@ input:checked + .slider:before {
     <span style="display:block; height: 20px;"></span>
 
     <div class="tab" style="width: 35%;">
-  	  <button class="tablinks" onclick="switchtab(event, 'organsim')" id="defaultOpen">Organism</button>
-  	  <button class="tablinks" onclick="switchtab(event, 'danger')">Danger</button>
+  	  <button class="tablinks" onclick="switchtab(event, 'orgdel')" id="defaultOpenDelete">Organism</button>
+  		<button class="tablinks" onclick="switchtab(event, 'npodel')">NPO</button>
+
+  	</div>
+
+    <div id="orgdel" class="tabcontent">
+
+      <div id="ordeltab">
+        <h3>Delete an Organism from the Database</h3>
+  			<form class="pure-form">
+
+  					<fieldset class="pure-group">
+  		        <input id="binomial" class="pure-input-2-3" placeholder="Binomial Nomenclature">
+  	    		</fieldset>
+
+  					<br><span style="display:block; height: 30px;"></span>
+  	        <input type="button" id="orgsubmit" value="Submit"></input>
+
+  			</form>
+  		</div>
+
+  	</div>
+
+  	<div id="npodel" class="tabcontent">
+      <h3>Delete a Non-Profit Organization (NPO) from the database</h3>
+      <form class="pure-form">
+
+          <fieldset class="pure-group">
+            <input id="nponame" class="pure-input-1-3" placeholder="NPO Name">
+          </fieldset>
+
+          <br><span style="display:block; height: 30px;"></span>
+          <input type="button" id="orgsubmit" value="Submit"></input>
+
+      </form>
+
+  	</div>
+
+  </div>
+
+	<div id="update" style="display: none;">
+
+    <span style="display:block; height: 20px;"></span>
+
+    <div class="tab" style="width: 35%;">
+  	  <button class="tablinks" onclick="switchtab(event, 'organsim')" id="defaultOpenUpdate">Organism</button>
   		<button class="tablinks" onclick="switchtab(event, 'npo')">NPO</button>
   	</div>
 
-    <div id="organsim" class="tabcontent">
+    <div id="orgupd" class="tabcontent">
 
       <div id="neworg">
         <h3>Delete an Organism from the Database</h3>
@@ -318,22 +334,7 @@ input:checked + .slider:before {
 
   	</div>
 
-  	<div id="danger" class="tabcontent">
-      <h3>Delete a Danger from the Database</h3>
-      <form class="pure-form">
-
-          <fieldset class="pure-group">
-            <input id="dname" class="pure-input-2-3" placeholder="Danger Name">
-          </fieldset>
-
-          <br><span style="display:block; height: 30px;"></span>
-          <input type="button" id="orgsubmit" value="Submit"></input>
-
-      </form>
-
-  	</div>
-
-  	<div id="npo" class="tabcontent">
+  	<div id="npoupd" class="tabcontent">
       <h3>delete a Non-Profit Organization (NPO) from the database</h3>
       <form class="pure-form">
 
@@ -385,26 +386,6 @@ $( document ).ready(function(){
         $('#' + options[i]).hide();
       }
     }
-
-    /*
-    switch (this.value){
-      case 'insert':
-          $('#insert').show();
-          $('#delete').hide();
-          $('#update').hide();
-      break;
-      case 'delete':
-          $('#delete').show();
-          $('#insert').hide();
-          $('#update').hide();
-      break;
-      case 'update':
-          $('#delete').hide();
-          $('#insert').hide();
-      break;
-
-    }
-    */
   });
 
 	$('#orgsubmit').click(function(){
@@ -517,7 +498,9 @@ function switchtab(evt, tab) {
   document.getElementById(tab).style.display = "block";
   evt.currentTarget.className += " active";
 }
-document.getElementById("defaultOpen").click();
+document.getElementById("defaultOpenDelete").click();
+document.getElementById("defaultOpenUpdate").click();
+document.getElementById("defaultOpenInsert").click();
 
 </script>
 
