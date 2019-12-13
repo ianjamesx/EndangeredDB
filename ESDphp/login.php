@@ -68,6 +68,8 @@
 		<a href="contact.php">Contact</a>
 		<a href="login.php">Login</a>
 		<a href="index.php">Home</a>
+		<br>
+		<br>
 		<h4>Endangered Species Database &copy; 2019</h4>
 	</div>
 </div>
