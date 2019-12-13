@@ -38,7 +38,7 @@ session_start();
  ?>
 	<a href="danger.php">Dangers Affecting Species</a>
 	<a href="nonprofit.php">Nonprofits</a>
-	<a href="search.php">Species Search</a>
+	<a href="search.php" class="active">Species Search</a>
 </div>
 
 <main>
