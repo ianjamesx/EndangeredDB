@@ -140,16 +140,6 @@ session_start();
 		<p class="result-npo">Possible Nonprofit Help: Nonprofits list</p>
 	</div>
 	
-	<div class="result">
-		<img src="placeholder.jpg" alt="image" width="200" height="200">
-		<h3 id="result_name">Regular Name</h3> <h4 id="result_sname"> Scientific Name</h4>
-		<p id="result_pop">Population</p>
-		<hr>
-		<p id="result_danger">This species affected mostly by: Danger</p>
-		<p id="result_region">Region: Region</p>
-		<p id="result_npo">Possible Nonprofit Help: Nonprofits list</p>
-	</div>
-		
 
 </main>
 	
