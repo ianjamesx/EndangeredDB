@@ -94,7 +94,7 @@
 		<br>
 		<br>
 		<a href="">
-		<input type="button" class="result-website" value="Website">
+		<input type="button" class="result-website" value="Website" target="_blank">
 		</a>	
 	
 	</div>
