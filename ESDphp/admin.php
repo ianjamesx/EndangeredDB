@@ -12,6 +12,7 @@ if(!isset($_SESSION['user_id']))
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Endangered Species Database</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="icon" href="favicon.png" type="image/x-icon"/>
 <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="esd_styles.css">
 
