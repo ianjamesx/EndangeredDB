@@ -124,10 +124,10 @@ input:checked + .slider:before {
 
 <div class="menu">
 	<a class="icon" href="javascript:void(0);" onclick="showMenu()"><img src="fa-bars.png" alt="MENU" width="22px"></a>
-	<a class="login" href="contact.html">Contact</a>
-	<a class="login" href="login.html">Login</a>
-	<a href="danger.html">Dangers Affecting Species</a>
-	<a href="nonprofit.html">Nonprofits</a>
+	<a class="login" href="contact.php">Contact</a>
+	<a class="login" href="login.php">Login</a>
+	<a href="danger.php">Dangers Affecting Species</a>
+	<a href="nonprofit.php">Nonprofits</a>
 	<a href="search.php" class="active">Species Search</a>
 </div>
 
@@ -202,15 +202,17 @@ input:checked + .slider:before {
 <div class="footer">
 	<div class="center">
 		<a href="search.php">Species&nbsp;Search</a>
-		<a href="#nonprofits">Nonprofits</a>
-		<a href="#dangers">Dangers&nbsp;Affecting&nbsp;Species</a>
+		<a href="nonprofit.php">Nonprofits</a>
+		<a href="danger.php">Dangers&nbsp;Affecting&nbsp;Species</a>
 	<br>
 	<hr>
 	<br>
 
-		<a href="contact.html">Contact</a>
-		<a href="#login">Login</a>
+		<a href="contact.php">Contact</a>
+		<a href="login.php">Login</a>
 		<a href="index.php">Home</a>
+		<br>
+		<br>
 		<h4>Endangered Species Database &copy; 2019</h4>
 	</div>
 </div>
