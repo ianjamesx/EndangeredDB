@@ -98,11 +98,12 @@
 		</a>	
 	
 	</div>
+</main>
 	
 	<button onclick="topFunction()" id="myBtn"></button>
 	
 	
-</main>
+
 <!-- footer -->
 <div class="footer">
 	<div class="center">
