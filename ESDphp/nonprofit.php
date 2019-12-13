@@ -98,15 +98,8 @@
 		</a>	
 	
 	</div>
-	<div class="result">
-		<h3 class="result_name">Nonprofit Organization Name</h3>
-		<span class="result_funds">Funds amount</span> <span>Funding: &nbsp;</span>
-		<br>
-		<br>
-		<a href="">
-		<input type="button" class="result-website" value="Website">
-		</a>	
-	</div>
+	
+	<button onclick="topFunction()" id="myBtn"></button>
 	
 	
 </main>
@@ -123,6 +116,8 @@
 		<a href="contact.php">Contact</a>
 		<a href="login.php">Login</a>
 		<a href="index.php">Home</a>
+		<br>
+		<br>
 		<h4>Endangered Species Database &copy; 2019</h4>
 	</div>
 </div>
@@ -149,7 +144,27 @@
 			y.src = "fa-exit.png";
 		}
 		else { y.src = "fa-bars.png"; }
-	}	
+	}
+	
+//Get the button
+	var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 300px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+  		if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    		mybutton.style.opacity = "0.8";
+  		} else {
+    		mybutton.style.opacity = "0";
+  		}
+	}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 	
     $(document).ready(function()
     {
