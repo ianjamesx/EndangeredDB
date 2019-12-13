@@ -43,7 +43,7 @@ session_start();
 
 <main>
 
-	<p>Search our database of plants and animals that are threatened and endangered. Use the buttons below to search within a category or subcategory, or search the entire database. You can also search <a href="nonprofits.html" class="lineLink">Nonprofits</a> or <a href="danger.html" class="lineLink">Dangers Affecting Species</a> separately on those pages.</p>
+	<p>Search our database of plants and animals that are threatened and endangered. Use the buttons below to search within a category or subcategory, or search the entire database. You can also search <a href="nonprofits.php" class="lineLink">Nonprofits</a> or <a href="danger.php" class="lineLink">Dangers Affecting Species</a> separately on those pages.</p>
 
 	<h1>Search Species by Category:</h1>
 	<p style="text-align: center;">Please select a category to search by:</p>
