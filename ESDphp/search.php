@@ -151,6 +151,8 @@ session_start();
 		
 
 </main>
+	
+	<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
 
 <!-- footer -->
 <div class="footer">
@@ -165,6 +167,8 @@ session_start();
 		<a href="contact.php">Contact</a>
 		<a href="login.php">Login</a>
 		<a href="index.php">Home</a>
+		<br>
+		<br>
 		<h4>Endangered Species Database &copy; 2019</h4>
 	</div>
 </div>
@@ -191,6 +195,27 @@ session_start();
 			}
 			else { y.src = "fa-bars.png"; }
 		}
+	
+//Get the button
+	var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 300px from the top of the document, show the button
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+  		if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    		mybutton.style.opacity = "0.8";
+  		} else {
+    		mybutton.style.opacity = "0";
+  		}
+	}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+	
 		$(document).ready(function()
     	{
         $('#submitSearch').click(function(){
