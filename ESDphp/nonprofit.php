@@ -36,7 +36,7 @@
  <?php }
  ?>
 	<a href="danger.php">Dangers Affecting Species</a>
-	<a href="nonprofit.php">Nonprofits</a>
+	<a href="nonprofit.php" class="active">Nonprofits</a>
 	<a href="search.php">Species Search</a>
 </div>
 	
