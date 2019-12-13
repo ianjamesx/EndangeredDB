@@ -42,7 +42,7 @@
 	
 <main>
 	
-	<p>Search our database of Nonprofit Organizations that are helping endangered animals all over the earth. Enter a nonprofit name to search or search by a region of focus. You can also search <a href="search.html" class="lineLink">Endangered Species</a> or <a href="danger.html" class="lineLink">Dangers Affecting Species</a> separately on those pages.</p>
+	<p>Search our database of Nonprofit Organizations that are helping endangered animals all over the earth. Enter a nonprofit name to search or search by a region of focus. You can also search <a href="search.php" class="lineLink">Endangered Species</a> or <a href="danger.php" class="lineLink">Dangers Affecting Species</a> separately on those pages.</p>
 	
 	<h1>Search Nonprofit Organizations</h1>
 	<span style="display:block; height: 30px;"></span>
