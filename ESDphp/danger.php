@@ -36,14 +36,14 @@
  <a class="login" href="" onclick="logout()">Logout</a>
  <?php }
  ?>
-	<a href="danger.php">Dangers Affecting Species</a>
+	<a href="danger.php" class="active">Dangers Affecting Species</a>
 	<a href="nonprofit.php">Nonprofits</a>
 	<a href="search.php">Species Search</a>
 </div>
 
 <main>
 
-	<p>Learn more about the Dangers that are affecting many different species around the world. You can also search <a href="search.html" class="lineLink">Endangered Species</a> or <a href="nonprofit.html" class="lineLink">Nonprofit Organizations</a> separately on those pages.</p>
+	<p>Learn more about the Dangers that are affecting many different species around the world. You can also search <a href="search.php" class="lineLink">Endangered Species</a> or <a href="nonprofit.php" class="lineLink">Nonprofit Organizations</a> separately on those pages.</p>
 
 	<h1>Dangers Affecting Species:</h1>
 	<span style="display:block; height: 30px;"></span>
